@@ -1,0 +1,11 @@
+[Unit]
+Description=Daemon logger service
+After=network.target
+Wants=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/daemon_app     # move daemon_app to this path
+
+[Install]
+WantedBy=multi-user.target

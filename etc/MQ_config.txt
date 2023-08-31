@@ -1,0 +1,7 @@
+number_of_message_queues=3
+message_queue_1_name=queue1
+message_queue_1_application=math_app
+message_queue_2_name=queue2
+message_queue_2_application=application2
+message_queue_3_name=queue3
+message_queue_3_application=application3
