@@ -14,4 +14,6 @@
 #include <iostream>
 #include <string>
 
+#define APP_NAME  "[DAEMON Server] "
+
 #endif

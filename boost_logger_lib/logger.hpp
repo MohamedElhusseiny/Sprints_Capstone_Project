@@ -18,6 +18,7 @@ void init_logging();
 
 #define SEVERITY_THRESHOLD logging::trivial::trace
 #define FILE_NAME   "/tmp/daemon_logs/log_%Y_%m_%d_%H_%M_%S.log"
+// #define FILE_NAME   "/tmp/daemon_logs/run_logs.log"      /* for test only */
 
 #define LOG_TRACE   BOOST_LOG_TRIVIAL(trace)
 #define LOG_DEBUG   BOOST_LOG_TRIVIAL(debug)

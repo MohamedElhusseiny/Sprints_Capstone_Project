@@ -19,7 +19,8 @@ int main(int argc, char* argv[])
     int error_status =  mq_sender.connect("/queue1");
     if(error_status == -1)
     {
-        std::cerr << "faild to connect\n";
+        std::cerr << "faild to connect with message queue\n";
+        return 1;
     }
     mq_sender.send("start math app" , TRACE_NUM);
 

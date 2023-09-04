@@ -1,12 +1,21 @@
+######################################################
+# create static and shared library
 
-###################################
-# create static lib for mq
-cmake_minimum_required(VERSION 3.2)
-project(mq_posix_static_lib)
+cmake_minimum_required(VERSION 3.22)
 
-add_library(MQ_lib mq_posix_wraper.cpp mq_posix_wraper.hpp)
+# set source file
+set(    MQ_SRC
+        mq_posix_wraper.cpp
+)
 
-target_link_libraries(MQ_lib PUBLIC -lrt)
+# creat static lib
+add_library(MQ_lib_static STATIC ${MQ_SRC})
 
+# creat shared lib
+add_library(MQ_lib_shared SHARED ${MQ_SRC})
 
-###################################
+# link with real time libs 
+target_link_libraries(MQ_lib_static PUBLIC -lrt)
+
+# link with real time libs 
+target_link_libraries(MQ_lib_shared PUBLIC -lrt)

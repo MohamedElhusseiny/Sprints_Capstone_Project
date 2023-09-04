@@ -1,5 +1,3 @@
-# Capstone_Project
----
 **IPC_LIBRARY**
 - Objective
   - The library is built for other applications' usage

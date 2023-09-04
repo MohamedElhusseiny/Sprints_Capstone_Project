@@ -17,8 +17,10 @@
 #include <thread>
 #include <mutex>
 #include "container_class.hpp"
-
+#include "server_class.hpp"
+// void mq_threads_handler(MessageQueueReceiver *mq_ptr , const Client& client);
 void mq_threads_handler(MessageQueueReceiver *mq_ptr);
 
+void server_thread_handler(Server &server_obj);
 
 #endif

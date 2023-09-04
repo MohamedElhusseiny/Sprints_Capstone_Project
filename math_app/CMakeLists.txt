@@ -1,3 +1,5 @@
+######################################################
+
 # set source files
 set(MATH_SRC
     math_app.cpp
@@ -17,9 +19,9 @@ target_compile_options(math_app PUBLIC -std=c++17)
 
 # add include files
 target_include_directories(math_app PRIVATE ${MATH_INC})
-message("My variable contains: ${MATH_INC}")
 
 # link math with mq lib
-target_link_libraries(math_app PRIVATE MQ_lib)
+target_link_libraries(math_app PRIVATE MQ_lib_static)
 
 install(TARGETS math_app)
+######################################################
